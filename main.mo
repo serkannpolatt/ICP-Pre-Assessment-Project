@@ -1,36 +1,36 @@
-actor hesap_makinesi {
-  var hucre: Int = 0;
+actor HesapMakinesi {
+  var hucre: Int = 0
 
-  // toplama
+  // Toplama
   public func toplama(s: Int): async Int {
-    hucre += s;
-    hucre
-  };
+    hucre += s
+    return hucre
+  }
 
-  // çıkarma
+  // Çıkarma
   public func cikarma(s: Int): async Int {
-    hucre -= s;
-    hucre
-  };
+    hucre -= s
+    return hucre
+  }
 
-  // çarpma
+  // Çarpma
   public func carpma(s: Int): async Int {
-    hucre *= s;
-    hucre
-  };
+    hucre *= s
+    return hucre
+  }
 
-  // bölme
-  public func bolme(s: Int): async ?Int {
+  // Bölme
+  public func bolme(s: Int): async Int? {
     if (s == 0) {
-      return null;
+      return nil
     } else {
-      hucre /= s;
-      return ?hucre;
+      hucre /= s
+      return hucre
     }
-  };
+  }
 
-  // temizle
-  public func temizle(): async () {
-    hucre := 0;
-  };
-};
+  // Temizle
+  public func temizle(): async Void {
+    hucre = 0
+  }
+}
